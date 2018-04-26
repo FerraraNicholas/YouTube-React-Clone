@@ -8,7 +8,7 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list'
 
 //API Key that allows you to make request from YouTube
-const API_KEY = 'AIzaSyCrASzTeztZEn1wcKZinFBMMayQ-NLpfzc';
+const API_KEY = '****';
 
 //Create a new componet that produces HTML
 class App extends Component {
