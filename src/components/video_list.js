@@ -6,8 +6,15 @@ const VideoList = (props) => {
     //Pass each video to VideoListItem, which wraps the video in JSX tags
     //Save to a variable
     const videoItems = props.videos.map((video) =>{        
-        return <VideoListItem video={video} />
+        return (
+            <VideoListItem
+            onVideoSelect={props.onVideoSelect} 
+            key={video.etag} 
+            video={video} />
+        );
     });
+
+
 
     return(
 
