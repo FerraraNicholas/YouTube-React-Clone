@@ -13,12 +13,17 @@ class SearchBar extends Component {
         //Defines an anonymous function with an event parameter
         //That sets the state of the value of input field each time it has changed
         return (
-            <div>
+            <div className="search-bar">
                 <input 
                 value={this.state.term}
-                onChange={ event => this.setState({ term: event.target.value }) } />
+                onChange={event => this.onInputChange(event.target.value)} />
             </div>
         );
+    }
+
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
     }
 }
 
